@@ -5,12 +5,13 @@ import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
 
 import { AgGridRow } from './list-data';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-context-menu',
   templateUrl: './context-menu.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SkyDropdownModule],
+  imports: [SkyDropdownModule, RouterOutlet],
 })
 export class ContextMenuComponent implements ICellRendererAngularComp {
   public contextMenuAriaLabel = '';
