@@ -1,4 +1,3 @@
-/*
 import { NgModule } from '@angular/core';
 import { AppAlertComponent } from './alert.component';
 
@@ -8,4 +7,3 @@ import { AppAlertComponent } from './alert.component';
     ],
   })
   export class AppAlertModule {}
-*/

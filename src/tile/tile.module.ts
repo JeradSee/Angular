@@ -1,4 +1,3 @@
-/*
 import { NgModule } from '@angular/core';
 import { TileComponent } from './tile.component';
 import { Tile1Component } from './tile1.component';
@@ -10,4 +9,3 @@ import { Tile1Component } from './tile1.component';
     ],
   })
   export class TileModule {}
-*/

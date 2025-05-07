@@ -10,14 +10,14 @@ export const routes: Routes = [
             ),
     },
     {
-        path: '/',
+        path: '/list',
         loadComponent: () =>
             import('../list-modal/list.component').then(
                 (m) => m.AgGridDataComponent,
             ),
     },
     {
-        path: '/',
+        path: '/tile',
         loadComponent: () =>
             import('../tile/tile.component').then(
                 (m) => m.TileComponent,
