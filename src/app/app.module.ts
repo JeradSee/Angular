@@ -1,16 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { SkyAlertModule } from '@skyux/indicators';
-import { AppComponent } from './app.component';
+import { AppAlertComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AgGridModule } from '../list-modal/list.module';
 import { TileModule } from '../tile/tile.module';
-import { AgGridDataComponent } from '../list-modal/list.component';
-import { TileComponent } from '../tile/tile.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppAlertComponent],
   imports: [
     CommonModule,
     SkyAlertModule,
@@ -18,7 +16,7 @@ import { TileComponent } from '../tile/tile.component';
     AgGridModule,
     TileModule,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppAlertComponent],
 })
 export class AppModule {
   /*
