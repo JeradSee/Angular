@@ -1,16 +1,28 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
 
 import { SkyAlertModule } from '@skyux/indicators';
 import { AppComponent } from './app.component';
-import { AG_GRID_DATA } from '../list-modal/list-data';
+import { BrowserModule } from '@angular/platform-browser';
+import { AgGridModule } from '../list-modal/list.module';
+import { TileModule } from '../tile/tile.module';
 import { AgGridDataComponent } from '../list-modal/list.component';
+import { TileComponent } from '../tile/tile.component';
 
 @NgModule({
-  declarations: [AppComponent, AgGridDataComponent],
   imports: [
     CommonModule,
-    SkyAlertModule
-  ]
+    SkyAlertModule,
+    BrowserModule,
+    AgGridModule,
+    TileModule,
+    AgGridDataComponent,
+    TileComponent,
+    AppComponent,
+  ],
 })
-export class AppModule {}
+export class AppModule {
+  ngDoBootstrap(appRef: ApplicationRef) {
+    appRef.bootstrap(AppComponent);
+  }
+}

@@ -17,6 +17,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 
 @Component({
   selector: 'ag-grid-data',
+  standalone: true,
   templateUrl: './list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [AgGridModule, SkyAgGridModule],

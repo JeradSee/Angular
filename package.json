@@ -21,9 +21,10 @@
     "@skyux/assets": "^12.11.2",
     "@skyux/core": "^12.11.2",
     "@skyux/i18n": "^12.11.2",
-    "@skyux/indicators": "12.11.2",
+    "@skyux/indicators": "^12.11.3",
     "@skyux/packages": "^12.11.2",
     "@skyux/theme": "^12.11.2",
+    "@skyux/tiles": "12.11.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
