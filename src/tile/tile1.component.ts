@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { SkyTilesModule } from '@skyux/tiles';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'div.tile1',

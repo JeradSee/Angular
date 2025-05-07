@@ -1,6 +1,5 @@
-import { AgGridDataComponent } from '../list-modal/list.component';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { AgGridDataComponent } from './list.component';
 
 @NgModule({
     imports: [

@@ -10,19 +10,20 @@ import { AgGridDataComponent } from '../list-modal/list.component';
 import { TileComponent } from '../tile/tile.component';
 
 @NgModule({
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     SkyAlertModule,
     BrowserModule,
     AgGridModule,
     TileModule,
-    AgGridDataComponent,
-    TileComponent,
-    AppComponent,
   ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
+  /*
   ngDoBootstrap(appRef: ApplicationRef) {
     appRef.bootstrap(AppComponent);
   }
+  */
 }
