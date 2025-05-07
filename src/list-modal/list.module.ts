@@ -1,3 +1,4 @@
+/*
 import { NgModule } from '@angular/core';
 import { AgGridDataComponent } from './list.component';
 
@@ -7,3 +8,4 @@ import { AgGridDataComponent } from './list.component';
     ],
   })
   export class AgGridModule {}
+*/

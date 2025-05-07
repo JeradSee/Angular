@@ -1,13 +1,3 @@
-<sky-alert
-  data-sky-id="alert-example"
-  [alertType]="days < 8 ? 'danger' : 'warning'"
-  [closeable]="days >= 8"
-  [descriptionType]="days < 8 ? 'danger' : 'important-warning'"
-  (closedChange)="onClosedChange($event)"
->
-  Your password expires in {{ days }} day(s)!
-</sky-alert>
-
 <h1>Angular Project</h1>
 
 <router-outlet></router-outlet>

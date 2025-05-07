@@ -2,26 +2,28 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { SkyAlertModule } from '@skyux/indicators';
-import { AppAlertComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { AgGridModule } from '../list-modal/list.module';
-import { TileModule } from '../tile/tile.module';
+//import { AppAlertModule } from '../alert/alert.module';
+//import { AgGridModule } from '../list-modal/list.module';
+//import { TileModule } from '../tile/tile.module';
+import { provideInitialTheme } from '@skyux/theme';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppAlertComponent],
+  declarations: [AppComponent],
   imports: [
-    CommonModule,
-    SkyAlertModule,
-    BrowserModule,
-    AgGridModule,
-    TileModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([]),
+    //TileModule,
+    //AgGridModule,
+    //AppAlertModule,
   ],
-  bootstrap: [AppAlertComponent],
+  bootstrap: [AppComponent],
+  providers: [provideInitialTheme('default')],
 })
-export class AppModule {
-  /*
-  ngDoBootstrap(appRef: ApplicationRef) {
-    appRef.bootstrap(AppComponent);
-  }
-  */
-}
+export class AppModule {}
