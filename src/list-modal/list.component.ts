@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid'
 
 import { AgGridModule } from 'ag-grid-angular';
 import {
@@ -17,6 +17,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 
 @Component({
   selector: 'ag-grid-data',
+  standalone: true,
   templateUrl: './list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [AgGridModule, SkyAgGridModule],
@@ -67,17 +68,21 @@ export class AgGridDataComponent {
     },
   ];
 
-  //readonly #agGridSvc = inject(SkyAgGridService);
+  private agGridSvc: SkyAgGridService;
 
-  constructor(private readonly agGridSvc: SkyAgGridService) {
+  constructor(private injectedAgGridSvc: SkyAgGridService) {
+    this.agGridSvc = injectedAgGridSvc;
+
     const gridOptions: GridOptions = {
       columnDefs: this.#columnDefs,
       rowSelection: { mode: 'singleRow' },
     };
 
-    this.gridOptions = this.agGridSvc.getGridOptions({
-      gridOptions,
-    });
+    this.gridOptions = {
+      columnDefs: this.#columnDefs,
+      rowSelection: { mode: 'singleRow' }
+    };
+    console.log('Service Injected', this.agGridSvc);
   }
 
   #endDateFormatter(params: ValueFormatterParams<AgGridRow, Date>): string {

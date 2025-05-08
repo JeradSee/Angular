@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@skyux/ag-grid": "12.11.3",
     "@skyux/assets": "^12.11.2",
     "@skyux/core": "^12.11.2",
     "@skyux/i18n": "^12.11.2",

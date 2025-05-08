@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { SkyTileDashboardConfig, SkyTilesModule } from '@skyux/tiles';
 
 import { Tile1Component } from './tile1.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-tile',
     templateUrl: './tile.component.html',
-    imports: [SkyTilesModule],
+    imports: [SkyTilesModule, RouterOutlet],
 })
 
 export class TileComponent {

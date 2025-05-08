@@ -2,17 +2,20 @@ import {
   EnvironmentProviders,
   makeEnvironmentProviders,
 } from '@angular/core';
-import { ExampleHelpService } from './help.service';
-import { SkyHelpService } from '@skyux/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+//import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
-function provideExampleHelpService(): EnvironmentProviders {
-  return makeEnvironmentProviders([
-    { provide: SkyHelpService, useClass: ExampleHelpService },
-  ]);
-}
+console.log ('bootstrapping app module');
 
+/*
 platformBrowserDynamic()
 .bootstrapModule(AppModule)
 .catch(err => console.error(err));
+*/
+
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));

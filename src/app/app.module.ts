@@ -1,13 +1,14 @@
+/*
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { SkyAlertModule } from '@skyux/indicators';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppAlertModule } from '../alert/alert.module';
-import { AgGridModule } from '../list-modal/list.module';
-import { TileModule } from '../tile/tile.module';
+//import { AppAlertModule } from '../alert/alert.module';
+//import { AgGridModule } from '../list-modal/list.module';
+//import { TileModule } from '../tile/tile.module';
 import { provideInitialTheme } from '@skyux/theme';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -19,11 +20,15 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([]),
-    TileModule,
-    AgGridModule,
-    AppAlertModule,
+    RouterOutlet,
+    //TileModule,
+    //AgGridModule,
+    //AppAlertModule,
   ],
   bootstrap: [AppComponent],
   providers: [provideInitialTheme('default')],
 })
 export class AppModule {}
+
+console.log('AppComponent loaded');
+*/
