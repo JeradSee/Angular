@@ -9,7 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //import { TileModule } from '../tile/tile.module';
 import { provideInitialTheme } from '@skyux/theme';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
@@ -26,7 +26,7 @@ import { AppComponent } from './app.component';
     //AppAlertModule,
   ],
   bootstrap: [AppComponent],
-  providers: [provideInitialTheme('default')],
+  providers: [provideInitialTheme('default'), provideAnimations()],
 })
 export class AppModule {}
 
