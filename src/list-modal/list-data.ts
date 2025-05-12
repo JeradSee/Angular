@@ -106,7 +106,7 @@ export interface AutocompleteOption {
     {
       name: 'Jerad Cho',
       age: 33,
-      startDate: new Date('7/15/2009'),
+      startDate: new Date('7/15/2025'),
       department: DEPARTMENTS[3],
       jobTitle: JOB_TITLES['Engineering'][1],
     },
@@ -122,7 +122,7 @@ export interface AutocompleteOption {
       name: 'Stephen Birchmore',
       age: 51,
       startDate: new Date('1/1/2012'),
-      endDate: new Date('6/15/2018'),
+      endDate: new Date('6/15/2025'),
       department: DEPARTMENTS[3],
       jobTitle: JOB_TITLES['Customer Support'][3],
     },
@@ -143,7 +143,7 @@ export interface AutocompleteOption {
     {
       name: 'Test Tester2',
       age: 23,
-      startDate: new Date('11/1/2019'),
+      startDate: new Date('11/1/2021'),
       department: DEPARTMENTS[1],
       jobTitle: JOB_TITLES['Sales'][1],
     },

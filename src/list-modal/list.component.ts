@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SkyAgGridModule, SkyAgGridService, SkyCellType } from '@skyux/ag-grid'
 
 import { AgGridModule } from 'ag-grid-angular';
@@ -68,21 +68,17 @@ export class AgGridDataComponent {
     },
   ];
 
-  private agGridSvc: SkyAgGridService;
+  readonly #agGridSvc = inject(SkyAgGridService);
 
-  constructor(private injectedAgGridSvc: SkyAgGridService) {
-    this.agGridSvc = injectedAgGridSvc;
-
+  constructor() {
     const gridOptions: GridOptions = {
       columnDefs: this.#columnDefs,
       rowSelection: { mode: 'singleRow' },
     };
 
-    this.gridOptions = {
-      columnDefs: this.#columnDefs,
-      rowSelection: { mode: 'singleRow' }
-    };
-    console.log('Service Injected', this.agGridSvc);
+    this.gridOptions = this.#agGridSvc.getGridOptions({
+      gridOptions,
+    });
   }
 
   #endDateFormatter(params: ValueFormatterParams<AgGridRow, Date>): string {
