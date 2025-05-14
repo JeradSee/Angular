@@ -3,21 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: '/',
+        path: 'alert',
         loadComponent: () =>
             import('../alert/alert.component').then(
                 (m) => m.AppAlertComponent,
             ),
     },
     {
-        path: '/list',
+        path: 'grid',
         loadComponent: () =>
             import('../list-modal/list.component').then(
                 (m) => m.AgGridDataComponent,
             ),
     },
     {
-        path: '/tile',
+        path: 'tile',
         loadComponent: () =>
             import('../tile/tile.component').then(
                 (m) => m.TileComponent,
