@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { AppAlertComponent } from '../alert/alert.component';
-import { AgGridDataComponent } from '../list-modal/list.component';
-import { TileComponent } from '../tile/tile.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, RouterModule /*, AppAlertComponent, AgGridDataComponent, TileComponent*/],
+    imports: [RouterOutlet, RouterModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
